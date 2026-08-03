@@ -39,14 +39,8 @@ pnpm-debug.log*
 .turbo/
 
 # Package manager
-<<<<<<< HEAD
 # Lockfiles ARE committed on purpose (reproducible installs + CI caching
 # via `npm ci`). Do not re-add package-lock.json here.
-=======
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
->>>>>>> 1d79a8219f76b0d3152b5f9e41a4a67d82a9052e
 
 # IDEs
 .vscode/

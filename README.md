@@ -97,7 +97,6 @@ The contact form works even with **no** `MONGO_URI` or SMTP configured — it ju
 
 ---
 
-<<<<<<< HEAD
 ---
 
 ## 5a. Testing & Code Coverage
@@ -192,8 +191,6 @@ docker run --env-file .env -p 5000:5000 portfolio-backend
 ```
 
 
-=======
->>>>>>> 1d79a8219f76b0d3152b5f9e41a4a67d82a9052e
 ## 5. Adding Your Own Content
 
 1. **Personal info** → `frontend/src/data/siteConfig.js`
