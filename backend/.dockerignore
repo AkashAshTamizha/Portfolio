@@ -1,0 +1,15 @@
+node_modules
+npm-debug.log*
+coverage
+tests
+.env
+.env.*
+!.env.example
+uploads/*
+!uploads/.gitkeep
+.git
+.gitignore
+.eslintrc.cjs
+*.md
+Dockerfile
+.dockerignore
