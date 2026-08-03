@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  html.light {
+    color-scheme: light;
+  }
+  body {
+    @apply bg-ink-950 text-cloud-100 font-body antialiased transition-colors duration-300;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 15% -10%, rgba(59,130,246,0.16), transparent),
+      radial-gradient(ellipse 60% 50% at 100% 10%, rgba(139,92,246,0.14), transparent);
+    background-attachment: fixed;
+  }
+  html.light body {
+    @apply bg-paper-50 text-cloud-900;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 15% -10%, rgba(59,130,246,0.08), transparent),
+      radial-gradient(ellipse 60% 50% at 100% 10%, rgba(139,92,246,0.06), transparent);
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+  ::selection {
+    @apply bg-blue-400/30 text-cloud-100;
+  }
+  *:focus-visible {
+    @apply outline-none ring-2 ring-blue-400 ring-offset-2 ring-offset-ink-950;
+  }
+  html.light *:focus-visible {
+    @apply ring-offset-paper-50;
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-xs tracking-wide text-blue-400;
+  }
+  .section-pad {
+    @apply px-6 sm:px-10 lg:px-16 py-20 sm:py-28;
+  }
+  .container-content {
+    @apply max-w-content mx-auto;
+  }
+
+  /* Card — solid navy surface, soft border, subtle depth (matches reference design) */
+  .card-surface {
+    @apply bg-ink-800 border border-ink-700 rounded-2xl shadow-card transition-all duration-300;
+  }
+  html.light .card-surface {
+    @apply bg-white border-paper-300 shadow-card;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-lg bg-brand-gradient bg-[length:200%_auto] bg-left text-white font-semibold px-5 py-3 text-sm transition-all duration-300 hover:bg-right hover:shadow-glow active:scale-[0.97];
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-lg border border-ink-600 bg-ink-800 text-cloud-100 font-semibold px-5 py-3 text-sm transition-all duration-200 hover:border-blue-400/60 hover:text-blue-300 active:scale-[0.97];
+  }
+  html.light .btn-secondary {
+    @apply border-paper-300 bg-white text-cloud-900 hover:border-blue-500 hover:text-blue-600;
+  }
+
+  .tag-chip {
+    @apply font-mono text-[11px] px-2.5 py-1 rounded-full bg-ink-700 text-blue-300 border border-ink-600;
+  }
+  html.light .tag-chip {
+    @apply bg-blue-500/10 text-blue-600 border-blue-500/20;
+  }
+
+  .input-field {
+    @apply w-full bg-ink-900 border border-ink-700 rounded-lg px-4 py-3 text-sm text-cloud-100 placeholder:text-cloud-500 outline-none transition-colors focus:border-blue-400/70;
+  }
+  html.light .input-field {
+    @apply bg-paper-50 border-paper-300 text-cloud-900 placeholder:text-cloud-500;
+  }
+
+  /* Nav / footer bar */
+  .glass-panel {
+    @apply bg-ink-950/95 border-ink-800;
+  }
+  html.light .glass-panel {
+    @apply bg-paper-50/95 border-paper-300;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-violet-400 to-purple-400;
+  }
+  .bg-grid {
+    background-image: linear-gradient(to right, rgba(139,147,167,0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(139,147,167,0.08) 1px, transparent 1px);
+    background-size: 36px 36px;
+  }
+  .glow-orb {
+    @apply pointer-events-none absolute rounded-full blur-3xl;
+  }
+}
