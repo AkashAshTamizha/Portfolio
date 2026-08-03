@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { Toaster } from "react-hot-toast";
 import { HelmetProvider } from "react-helmet-async";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import { ThemeProvider } from "./context/ThemeContext";
 import { ProfileProvider } from "./context/ProfileContext";
@@ -112,6 +113,7 @@ function AdminShell() {
           style: { background: "#121A2E", color: "#E7E9F5", border: "1px solid #232A54", fontSize: "14px" },
         }}
       />
+      <SpeedInsights />
     </>
   );
 }
@@ -129,6 +131,7 @@ function EmployeeShell() {
           style: { background: "#121A2E", color: "#E7E9F5", border: "1px solid #232A54", fontSize: "14px" },
         }}
       />
+      <SpeedInsights />
     </>
   );
 }
@@ -168,6 +171,7 @@ function PublicShell() {
                 },
               }}
             />
+            <SpeedInsights />
           </UserAuthProvider>
         </SiteSettingsProvider>
       </ProfileProvider>
