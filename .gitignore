@@ -87,3 +87,5 @@ pids/
 
 # Misc
 *.local
+.vercel
+.env*
