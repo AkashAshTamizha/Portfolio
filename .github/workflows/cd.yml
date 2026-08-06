@@ -268,18 +268,6 @@ jobs:
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
 
-      - name: Debug Vercel auth/project resolution
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-        run: |
-          echo "ORG_ID length: ${#VERCEL_ORG_ID}, prefix: ${VERCEL_ORG_ID:0:6}"
-          echo "PROJECT_ID length: ${#VERCEL_PROJECT_ID}, prefix: ${VERCEL_PROJECT_ID:0:6}"
-          echo "TOKEN length: ${#VERCEL_TOKEN}"
-          vercel whoami --token="$VERCEL_TOKEN"
-          vercel project ls --token="$VERCEL_TOKEN"
-
       - name: Pull Vercel project settings
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
