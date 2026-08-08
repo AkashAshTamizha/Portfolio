@@ -2,8 +2,9 @@ import { useRef, useState } from "react";
 import { LuUpload, LuX, LuLoaderCircle, LuFile } from "react-icons/lu";
 import toast from "react-hot-toast";
 import { api, API_BASE_URL } from "../api/client";
+const ORIGIN = API_BASE_URL
 
-const ORIGIN = API_BASE_URL.replace(/\/api\/?$/, "");
+// const ORIGIN = API_BASE_URL.replace(/\/api\/?$/, "");
 const resolveUrl = (url) => (url.startsWith("http") ? url : `${ORIGIN}${url}`);
 
 // Handles both:

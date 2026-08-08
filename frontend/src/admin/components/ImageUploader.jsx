@@ -3,7 +3,8 @@ import { LuUpload, LuX, LuLoaderCircle } from "react-icons/lu";
 import toast from "react-hot-toast";
 import { api, API_BASE_URL } from "../api/client";
 
-const ORIGIN = API_BASE_URL.replace(/\/api\/?$/, "");
+// const ORIGIN = API_BASE_URL.replace(/\/api\/?$/, "");
+const ORIGIN = API_BASE_URL
 
 function resolveUrl(url) {
   if (!url) return "";

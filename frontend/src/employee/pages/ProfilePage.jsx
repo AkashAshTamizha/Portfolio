@@ -7,7 +7,9 @@ import ResumeDownloadButton from "../../components/ui/ResumeDownloadButton";
 
 function assetUrl(path) {
   if (!path) return "";
-  return path.startsWith("http") ? path : `${API_BASE_URL.replace(/\/api$/, "")}${path}`;
+  // return path.startsWith("http") ? path : `${API_BASE_URL.replace(/\/api$/, "")}${path}`;
+  return path.startsWith("http") ? path : `${API_BASE_URL}${path}`;
+
 }
 
 export default function ProfilePage() {
