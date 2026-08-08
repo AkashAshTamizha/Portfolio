@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <Seo path="/" />
 
-      {/* Hero — text left, circular photo right, scroll indicator */}
+      {/* Hero — text left, circular photo right, scroll indicator. */}
       <section className="relative overflow-hidden min-h-[calc(100vh-64px)] flex items-center">
         <div className="pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-blue-400/10 blur-3xl" />
         <div className="pointer-events-none absolute top-1/3 -left-24 h-72 w-72 rounded-full bg-violet-400/10 blur-3xl" />
