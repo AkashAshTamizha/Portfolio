@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { Toaster } from "react-hot-toast";
 import { HelmetProvider } from "react-helmet-async";
+import { Analytics } from "@vercel/analytics/react";
 
 import { ThemeProvider } from "./context/ThemeContext";
 import { ProfileProvider } from "./context/ProfileContext";
@@ -183,6 +184,7 @@ export default function App() {
   return (
     <HelmetProvider>
       {isAdmin ? <AdminShell /> : isEmployee ? <EmployeeShell /> : <PublicShell />}
+      <Analytics />
     </HelmetProvider>
   );
 }
