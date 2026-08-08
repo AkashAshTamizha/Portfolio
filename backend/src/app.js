@@ -55,29 +55,29 @@ app.use(morgan(process.env.NODE_ENV === "production" ? "combined" : "dev"));
 // Serve uploaded images/documents statically
 app.use("/uploads", express.static(path.resolve("uploads")));
 
-app.get("/health", (req, res) => {
+app.get("/api/health", (req, res) => {
   res.json({ success: true, status: "ok", timestamp: new Date().toISOString() });
 });
 
-app.use("/auth", authRoutes);
-app.use("/profile", profileRoutes);
-app.use("/contact-info", contactInfoRoutes);
-app.use("/upload", uploadRoutes);
-app.use("/skills", skillRoutes);
-app.use("/services", serviceRoutes);
-app.use("/experience", experienceRoutes);
-app.use("/education", educationRoutes);
-app.use("/certifications", certificationRoutes);
-app.use("/projects", projectRoutes);
-app.use("/contact", contactRoutes);
-app.use("/employees", employeeRoutes);
-app.use("/tasks", taskRoutes);
-app.use("/attendance", attendanceRoutes);
-app.use("/leaves", leaveRoutes);
-app.use("/ratings", ratingRoutes);
-app.use("/reviews", reviewRoutes);
-app.use("/settings", settingsRoutes);
-app.use("/admin/stats", adminStatsRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/profile", profileRoutes);
+app.use("/api/contact-info", contactInfoRoutes);
+app.use("/api/upload", uploadRoutes);
+app.use("/api/skills", skillRoutes);
+app.use("/api/services", serviceRoutes);
+app.use("/api/experience", experienceRoutes);
+app.use("/api/education", educationRoutes);
+app.use("/api/certifications", certificationRoutes);
+app.use("/api/projects", projectRoutes);
+app.use("/api/contact", contactRoutes);
+app.use("/api/employees", employeeRoutes);
+app.use("/api/tasks", taskRoutes);
+app.use("/api/attendance", attendanceRoutes);
+app.use("/api/leaves", leaveRoutes);
+app.use("/api/ratings", ratingRoutes);
+app.use("/api/reviews", reviewRoutes);
+app.use("/api/settings", settingsRoutes);
+app.use("/api/admin/stats", adminStatsRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
