@@ -250,15 +250,19 @@ jobs:
   # Deploy frontend to Vercel using the official CLI in "prebuilt" mode
   # so the same build config Vercel would use stays declarative and
   # inspectable in this repo.
+  #
+  # No working-directory here on purpose: Root Directory = "frontend" is
+  # configured on the Vercel project itself. `vercel pull` downloads that
+  # setting into .vercel/project.json at the repo root, and the CLI applies
+  # it automatically when building/deploying. If this job also cd's into
+  # frontend/, the CLI concatenates the two paths and looks for
+  # frontend/frontend, which throws "Error: spawn sh ENOENT".
   # ────────────────────────────────────────────────────────────────
   deploy-frontend:
     name: Deploy frontend (Vercel)
     needs: gate
     runs-on: ubuntu-latest
     environment: production
-    defaults:
-      run:
-        working-directory: frontend
     steps:
       - name: Checkout
         uses: actions/checkout@v4
