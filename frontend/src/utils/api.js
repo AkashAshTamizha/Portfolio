@@ -7,6 +7,8 @@ const API_BASE_URL = import.meta.env.VITE_API_URL;
 // Origin without the /api suffix. Uploaded files (images, resumes, videos)
 // now live on Cloudinary and always come back as full https:// URLs, so
 // this is only a fallback for any legacy relative paths.
+console.log("API URL---------------------------------->",API_BASE_URL);
+
 const API_ORIGIN = API_BASE_URL.replace(/\/api\/?$/, "");
 
 export function assetUrl(path) {

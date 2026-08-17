@@ -4,6 +4,7 @@ import { LuUpload } from "react-icons/lu";
 import { useAuth } from "../hooks/useAuth";
 import { api, API_BASE_URL } from "../api/client";
 import ResumeDownloadButton from "../../components/ui/ResumeDownloadButton";
+console.log("profile image URL---------------------------------->",API_BASE_URL);
 
 function assetUrl(path) {
   if (!path) return "";
