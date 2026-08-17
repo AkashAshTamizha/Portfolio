@@ -3,7 +3,7 @@
 // backend has no records for a resource, the relevant array/object comes
 // back empty and the pages render a "No data available" state instead.
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const API_BASE_URL = import.meta.env.VITE_API_URL ;
 // Origin without the /api suffix. Uploaded files (images, resumes, videos)
 // now live on Cloudinary and always come back as full https:// URLs, so
 // this is only a fallback for any legacy relative paths.
