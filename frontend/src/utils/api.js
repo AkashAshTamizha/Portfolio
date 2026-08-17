@@ -3,7 +3,7 @@
 // backend has no records for a resource, the relevant array/object comes
 // back empty and the pages render a "No data available" state instead.
 
-const API_BASE_URL = import.meta.env.VITE_API_URL ;
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 // Origin without the /api suffix. Uploaded files (images, resumes, videos)
 // now live on Cloudinary and always come back as full https:// URLs, so
 // this is only a fallback for any legacy relative paths.
@@ -13,8 +13,11 @@ export function assetUrl(path) {
   if (!path) return "";
   return /^https?:\/\//i.test(path) ? path : `${API_ORIGIN}${path}`;
 }
+ 
+console.log("API_BASE_URL------------------------------>",API_BASE_URL);
 
 async function getJson(path) {
+  
   const response = await fetch(`${API_BASE_URL}${path}`);
   const data = await response.json().catch(() => ({}));
   if (!response.ok) {

@@ -1,5 +1,6 @@
 const API_BASE_URL = import.meta.env.VITE_API_URL ;
 const TOKEN_KEY = "portfolio_admin_token";
+console.log("replace--------------------------------->",API_BASE_URL);
 
 export function getToken() {
   return window.localStorage.getItem(TOKEN_KEY);
@@ -7,6 +8,7 @@ export function getToken() {
 export function setToken(token) {
   window.localStorage.setItem(TOKEN_KEY, token);
 }
+
 export function clearToken() {
   window.localStorage.removeItem(TOKEN_KEY);
 }
