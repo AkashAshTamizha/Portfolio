@@ -9,7 +9,6 @@ import { useProfile } from "../hooks/useProfile";
 
 export default function Home() {
   const { profile, loading, hasProfile } = useProfile();
-console.log("profile--------------------->",profile);
 
   return (
     <>

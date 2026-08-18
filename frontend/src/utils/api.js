@@ -17,7 +17,9 @@ export function assetUrl(path) {
   return /^https?:\/\//i.test(path) ? path : `${API_ORIGIN}${path}`;
 }
  
-console.log("API_BASE_URL------------------------------>",API_BASE_URL);
+console.log("API_BASE_URL_API------------------------------>",API_ORIGIN);
+console.log("API_BASE_URL------------------------------>",API_ORIGIN);
+
 
 async function getJson(path) {
   
