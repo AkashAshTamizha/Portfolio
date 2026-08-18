@@ -18,6 +18,7 @@ import Loader from "./components/ui/Loader";
 import BackToTop from "./components/ui/BackToTop";
 import { UserAuthProvider } from "./context/UserAuthContext";
 
+
 // Route-level code splitting: each page becomes its own chunk and is only
 // downloaded when the user actually navigates to it. This is what keeps the
 // initial bundle small and first-load fast, instead of shipping all pages
