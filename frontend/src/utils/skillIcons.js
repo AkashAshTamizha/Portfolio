@@ -48,7 +48,6 @@ const ICON_RULES = [
   ["bash", FiTerminal, "#8A8FB8"],
 ];
 
-
 export function getSkillIcon(name) {
   const lower = name.toLowerCase();
   const match = ICON_RULES.find(([key]) => lower.includes(key));
