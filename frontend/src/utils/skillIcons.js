@@ -11,6 +11,7 @@ import { FiServer, FiTerminal, FiCode } from "react-icons/fi";
 
 // Ordered so more specific matches (e.g. "javascript") are checked before
 // broader ones (e.g. "java") since matching is substring-based.
+
 const ICON_RULES = [
   ["typescript", SiTypescript, "#3178C6"],
   ["javascript", SiJavascript, "#F7DF1E"],
