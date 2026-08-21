@@ -11,7 +11,7 @@ export default function Footer() {
   const { data: services } = useApiData(getServices, []);
   const serviceList = services || [];
 
-  const initials = profile?.initials || (profile?.name ? profile.name.slice(0, 2).toUpperCase() : "");
+  const initials = profile?.initials  || (profile?.name ? profile.name.slice(0, 2).toUpperCase() : "");
 
   return (
     <footer className="border-t border-ink-800 [html.light_&]:border-paper-300 bg-ink-950 [html.light_&]:bg-paper-50">
