@@ -15,7 +15,7 @@ export default function Team() {
     <>
       <Seo title="Our Team" path="/team" description="Meet the team behind our projects." />
 
-      <Section eyebrow="// the-team" title="Our Team" subtitle="The people behind the work.">
+      <Section  title="Our Team" subtitle="The people behind the work.">
         {loading ? (
           <SectionLoader />
         ) : list.length === 0 ? (
