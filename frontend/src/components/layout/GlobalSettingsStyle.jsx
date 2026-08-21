@@ -32,6 +32,7 @@ import { useSiteSettings } from "../../hooks/useSiteSettings";
 export default function GlobalSettingsStyle() {
   const { settings } = useSiteSettings();
 
+  
   const css = `
     :root {
       --settings-font-size: ${settings.fontSize}px;
