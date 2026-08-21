@@ -11,6 +11,7 @@ export default function Footer() {
   const { data: services } = useApiData(getServices, []);
   const serviceList = services || [];
 
+  
   const initials = profile?.initials  || (profile?.name ? profile.name.slice(0, 2).toUpperCase() : "");
 
   return (
