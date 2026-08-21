@@ -9,6 +9,7 @@ import { getCertifications } from "../utils/api";
 export default function Certifications() {
   const { data: certifications, loading } = useApiData(getCertifications, []);
   const list = certifications || [];
+  
 
   return (
     <>
